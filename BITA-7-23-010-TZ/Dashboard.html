@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Portal Overview</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .navbar {
+            background-color: #23272b;
+        }
+        .navbar-brand, .nav-link, .dropdown-item {
+            color: #e2e6ea ;
+        }
+        .nav-link:hover, .dropdown-item:hover {
+            color: #fff;
+        }
+        .dropdown-menu {
+            background-color: #23272b;
+            border: none;
+        }
+        .dropdown-menu a {
+            color: #e2e6ea;
+        }
+        .dropdown-menu a:hover {
+            background-color: #343a40;
+            color: #fff;
+        }
+        .main-content {
+            flex: 1;
+            padding: 32px 0;
+            background: #f4f6fb;
+        }
+        .summary-card {
+            color: #fff;
+            padding: 22px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 22px;
+        }
+        .summary-title {
+            font-size: 1.1rem;
+            margin-bottom: 7px;
+            letter-spacing: 0.5px;
+        }
+        .summary-value {
+            font-size: 2.2rem;
+            font-weight: 600;
+        }
+        .bg-primary-custom {
+            background: #0d6efd;
+        }
+        .bg-success-custom {
+            background: #198754;
+        }
+        .bg-warning-custom {
+            background: #ffc107;
+            color: #222 ;
+        }
+        .footer-custom {
+            background: #23272b;
+            color: #e2e6ea;
+            padding: 18px 0;
+            text-align: center;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Library Portal</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#">Users</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Books</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Members</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Issuance</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Returns</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Reports</a></li>
+                </ul>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="accountMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            My Account
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="accountMenu">
+                            <li><a class="dropdown-item" href="#">Update Password</a></li>
+                            <li><a class="dropdown-item" href="#">Edit Profile</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Sign Out</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="main-content container">
+        <h2 class="mb-4">Dashboard Overview</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="summary-card bg-primary-custom">
+                    <div class="summary-title">Books Catalogued</div>
+                    <div class="summary-value">1,250</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="summary-card bg-success-custom">
+                    <div class="summary-title">Current Members</div>
+                    <div class="summary-value">540</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="summary-card bg-warning-custom">
+                    <div class="summary-title">Issued Books</div>
+                    <div class="summary-value">320</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        Latest Updates
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Recent actions and changes in the system are listed below.</p>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col">No.</th>
+                                    <th scope="col">Event</th>
+                                    <th scope="col">Timestamp</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Issued "The Great Gatsby" to John Doe</td>
+                                    <td>2025-05-20</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Registered new member: Jane Smith</td>
+                                    <td>2025-05-19</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>Returned "1984" by Alice Johnson</td>
+                                    <td>2025-05-18</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer-custom">
+        <div class="container">
+            <p>&copy; 2025 Library Portal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
